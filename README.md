@@ -14,12 +14,12 @@ https://www.kaggle.com/competitions/energy-anomaly-detection
 - Building meta data and weather data
 - Temporal features (e.g., hour, weekday, and day of year)
 - Target encoding features (ref: [preprocessing script from 1st place team in GEPIII](https://github.com/buds-lab/ashrae-great-energy-predictor-3-solution-analysis/))
-- Change-of-value features: calculate change of value compared to nearby values (e.g., X(t)-X(t-1) and X(t)/X(t-1)) with varying shift steps (from 1 hour to 168 hours))
+- Value-change features: calculate change of value compared to nearby values (e.g., X(t)-X(t-1) and X(t)/X(t-1)) with varying shift steps (from 1 hour to 168 hours))
 - Features from data smoothing and k-means clustering were also tried, but they don’t appear to significantly improve the score
 
 3. Modeling
-- Train/valid split by building_id to ensure the valid data were unseen during training
-Downsampling training dataset to solve data imbalance (~5% of anomalies): normal values : abnormal values = 1:1
+- Train/valid split by *building_id* to ensure the valid data were unseen during training
+- Downsampling training dataset to solve data imbalance (~5% of anomalies) 
 - Model ensembling via simple averaging: XGBosst, LightGBM, CatBoost, and HistGradientBoosting (weight of 0.25 for each)
 
 4. Postprocessing
