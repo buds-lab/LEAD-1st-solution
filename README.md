@@ -1,5 +1,4 @@
-# LEAD-1st-solution
-1st winning solution in Large-scale Energy Anomaly Detection (LEAD) competition.
+# 1st winning solution in Large-scale Energy Anomaly Detection (LEAD) competition
 In this repository, you can find script notebooks of the winning solution in [notebooks folder](notebooks/), [presentation slides](Trimming%20outliers%20using%20trees%20(slides).pdf),and [the paper detailing the modeling framework](Trimming%20outliers%20using%20trees%20(paper).pdf).
 
 ### Link of Large-scale Energy Anomaly Detection (LEAD) competition:
